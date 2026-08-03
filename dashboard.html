@@ -1,140 +1,49 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>School ERP Dashboard</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/dashboard.css" />
-  </head>
-
-  <body>
-    <div class="dashboard">
-      <header class="header">
-        <div class="header-left">
-          <img src="images/logo.png" class="logo" alt="Logo" />
-          <h3>School ERP</h3>
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Devryon Demo School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/erp.css">
+  <style>.nav-submenu{padding:2px 0 10px}.sidebar .nav-submenu a{padding:7px 14px 7px 38px;font-size:10px;color:#b9c8e9}.sidebar .nav-submenu a.active{background:#ffffff0e;box-shadow:inset 2px 0 #f3bf3b;color:#fff}.setup-entry{margin-top:8px!important}.setup-tabs{display:flex;align-items:center;gap:5px;background:#fff;border:1px solid #e9edf5;border-radius:8px;padding:7px;margin-bottom:16px;box-shadow:0 2px 8px rgba(25,46,84,.035)}.setup-tabs span{font-size:10px;font-weight:700;color:#8b96aa;padding:0 8px}.setup-tabs a{padding:9px 13px;text-decoration:none;color:#66738a;border-radius:5px;font-size:11px;font-weight:600}.setup-tabs a.active{color:#fff;background:#10285f}.detail-item{border:1px solid #e9edf4;background:#fafbfe;border-radius:6px;padding:11px 12px;min-height:59px}.detail-item span{display:block;font-size:9px;color:#8994a9;margin-bottom:6px}.detail-item strong{font-size:11px;color:#354361;font-weight:600}.detail-item.wide{grid-column:span 3}.brand{height:76px;overflow:hidden;padding:0 4px 10px}.brand-logo{width:190px;height:76px;object-fit:cover;object-position:center}.dashboard-logo{width:190px;height:48px;object-fit:cover;object-position:center}.topbar{gap:18px!important;padding:0 22px!important}.header-brand{height:48px;overflow:hidden;flex:none}.header-search{height:36px;width:min(315px,32vw);border:1px solid #e6eaf1;border-radius:7px;display:flex;align-items:center;gap:8px;padding:0 11px;color:#8994a7}.header-search input{border:0;outline:0;width:100%;font:10px Inter;color:#65718a}.top-actions{gap:8px!important}.header-chip{height:35px;padding:0 10px!important;border:1px solid #e6eaf1!important;border-radius:7px!important;font:10px Inter!important;color:#56647b!important}.admin-name{font-weight:700;color:#38445e}.admin-role{font-size:9px;color:#8c96a8}@media(max-width:700px){.header-search{display:none}.dashboard-logo{width:150px}.top-actions .header-chip{display:none}}@media(max-width:530px){.setup-tabs{overflow:auto}.setup-tabs span{display:none}.setup-tabs a{white-space:nowrap}}</style>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#admission"><img class="brand-logo" src="images/school-logo.png" alt="Devryon Demo School"></a>
+      <div class="session">▣ &nbsp; Current Session: 2025-26</div>
+      <p class="nav-label">Quick links</p>
+      <nav id="mainNav">
+        <a class="active" href="#admission" data-view="admission">⌂ <span>Front Office</span><b>›</b></a>
+        <div class="nav-submenu" aria-label="Front Office pages">
+          <a href="#admission" data-view="admission">Admission Enquiry</a>
+          <a href="#visitor" data-view="visitor">Visitor Book</a>
+          <a href="#phone" data-view="phone">Phone Call Log</a>
+          <a href="#dispatch" data-view="dispatch">Postal Dispatch</a>
+          <a href="#receive" data-view="receive">Postal Receive</a>
+          <a href="#complaint" data-view="complaint">Complaint</a>
         </div>
-
-        <div class="header-center">
-          <input
-            class="search-box"
-            type="text"
-            placeholder="Search anything..."
-          />
-        </div>
-
-        <div class="header-right">
-          <select class="language">
-            <option>English</option>
-            <option>Hindi</option>
-          </select>
-
-          <button class="icon-btn calendar-btn">📅</button>
-
-          <button class="icon-btn notification-btn">🔔</button>
-
-          <div class="profile">
-            <img src="images/profile.png" alt="Profile" />
-            <span>Admin</span>
-          </div>
-        </div>
-      </header>
-
-      <div class="dashboard-body">
-        <aside class="sidebar">
-          <div class="sidebar-header">
-            <img src="images/logo.png" alt="" />
-            <h2>School ERP</h2>
-          </div>
-
-          <nav class="sidebar-menu">
-            <ul>
-              <li class="active"><a href="#">Dashboard</a></li>
-
-              <li class="menu-title">Front Office</li>
-
-              <li>
-                <a class="submenu" href="pages/admission-enquiry.html"
-                  >Admission Enquiry</a
-                >
-              </li>
-              <li>
-                <a class="submenu" href="pages/visitor-book.html"
-                  >Visitor Book</a
-                >
-              </li>
-              <li>
-                <a class="submenu" href="pages/phone-log.html"
-                  >Phone Call Log</a
-                >
-              </li>
-              <li>
-                <a class="submenu" href="pages/postal-dispatch.html"
-                  >Postal Dispatch</a
-                >
-              </li>
-              <li>
-                <a class="submenu" href="pages/postal-receive.html"
-                  >Postal Receive</a
-                >
-              </li>
-              <li>
-                <a class="submenu" href="pages/complaint.html">Complaint</a>
-              </li>
-
-              <li class="menu-title">Setup</li>
-
-              <li><a class="submenu" href="pages/purpose.html">Purpose</a></li>
-              <li><a class="submenu" href="pages/source.html">Source</a></li>
-              <li>
-                <a class="submenu" href="pages/reference.html">Reference</a>
-              </li>
-            </ul>
-          </nav>
-        </aside>
-
-        <main class="content">
-          <h2 class="page-title">Dashboard</h2>
-
-          <div class="content-card">
-            <h3>Welcome Admin 👋</h3>
-
-            <p class="mt-20">
-              This is the main dashboard layout. Every module such as Admission
-              Enquiry, Visitor Book, Complaint, Postal Dispatch, Postal Receive
-              and Setup pages will load inside this content area.
-            </p>
-
-            <div class="mt-30 flex-between">
-              <div class="card" style="width: 31%">
-                <h4>Total Students</h4>
-                <h2 class="mt-20">1250</h2>
-              </div>
-
-              <div class="card" style="width: 31%">
-                <h4>New Admissions</h4>
-                <h2 class="mt-20">48</h2>
-              </div>
-
-              <div class="card" style="width: 31%">
-                <h4>Visitors Today</h4>
-                <h2 class="mt-20">19</h2>
-              </div>
-            </div>
-          </div>
-        </main>
-      </div>
-    </div>
-
-    <script src="js/app.js"></script>
-  </body>
+        <a href="#purpose" data-view="purpose" class="setup-entry">⚙ <span>Setup Front Office</span><b>›</b></a>
+        <a href="#students">♟ <span>Student Information</span><b>›</b></a>
+        <a href="#fees">▣ <span>Fees Collection</span><b>›</b></a>
+        <a href="#online">▧ <span>Online Course</span><b>›</b></a>
+        <a href="#behaviour">⚑ <span>Behaviour Records</span><b>›</b></a>
+        <a href="#tfa">♜ <span>TFA</span><b>›</b></a>
+        <a href="#scholarship">⌑ <span>Scholarship</span><b>›</b></a>
+        <a href="#timetable">▤ <span>AI Timetable</span><b>›</b></a>
+        <a href="#gmeet">▰ <span>Gmeet Live Classes</span><b>›</b></a>
+        <a href="#zoom">▰ <span>Zoom Live Classes</span><b>›</b></a>
+        <a href="#income">$ <span>Income</span><b>›</b></a>
+        <a href="#expenses">▤ <span>Expenses</span><b>›</b></a>
+      </nav>
+    </aside>
+    <section class="workspace">
+      <header class="topbar"><button id="menuToggle" class="menu-toggle">☰</button><div class="header-brand"><img class="dashboard-logo" src="images/school-logo.png" alt="Devryon Demo School"></div><div class="header-search">⌕ <input type="search" placeholder="Search students, staff, fees, admissions..."></div><div class="crumb" hidden>Dashboard <span>/</span> Front Office <span>/</span> <strong id="crumbTitle">Admission Enquiry</strong></div><div class="top-actions"><button class="header-chip">◉ English⌄</button><button class="header-chip">▣ Calendar⌄</button><button class="header-chip">☑ Tasks <b>3</b></button><button class="header-chip">◌ Messages <b>2</b></button><span class="avatar">A</span><span><span class="admin-name">Super Admin</span><span class="admin-role">Administrator</span></span><b>⌄</b></div></header>
+      <main id="app" class="page"></main>
+    </section>
+  </div>
+  <div class="modal" id="recordModal" aria-hidden="true"><div class="modal-card"><div class="modal-head"><div><span class="modal-icon">✦</span><span><strong id="modalTitle">Add Admission Enquiry</strong><small id="modalSub">Capture new student enquiry details for future admissions</small></span></div><button class="modal-close" data-close>×</button></div><form id="recordForm"><div class="modal-body" id="formFields"></div><div class="modal-foot"><button type="button" class="btn ghost" data-close>Cancel</button><button class="btn primary" type="submit">▣ &nbsp; <span id="saveText">Save Enquiry</span> &nbsp;→</button></div></form></div></div>
+  <script src="js/erp.js"></script>
+</body>
 </html>
