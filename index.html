@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>School ERP - Login</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="login-container">
+      <!-- Left Panel -->
+      <div class="left-panel">
+        <div class="login-card fade">
+          <div class="login-header">
+            <img src="images/logo.png" alt="School Logo" />
+            <h2>Welcome Back</h2>
+            <p>Please login to continue to the School ERP Management System.</p>
+          </div>
+
+          <form class="login-form">
+            <div class="input-group">
+              <label>Email Address</label>
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Enter your email"
+              />
+            </div>
+
+            <div class="input-group">
+              <label>Password</label>
+              <input
+                type="password"
+                class="form-control"
+                placeholder="Enter your password"
+              />
+            </div>
+
+            <div class="options">
+              <div class="remember">
+                <input type="checkbox" id="remember" />
+                <label for="remember">Remember Me</label>
+              </div>
+
+              <a href="#">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="login-btn">Sign In</button>
+          </form>
+
+          <div class="login-footer">
+            Don't have an account?
+            <a href="#">Contact Administrator</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Panel -->
+      <div class="right-panel">
+        <div class="banner-content">
+          <h1>School ERP<br />Management System</h1>
+
+          <p>
+            Manage admissions, students, attendance, visitors, complaints, fees
+            and reports from one powerful dashboard.
+          </p>
+
+          <div class="features">
+            <div class="feature">✔ Student Management</div>
+
+            <div class="feature">✔ Admission Enquiry</div>
+
+            <div class="feature">✔ Visitor Book</div>
+
+            <div class="feature">✔ Attendance & Reports</div>
+
+            <div class="feature">✔ Complaint & Postal Management</div>
+          </div>
+
+          <img
+            src="images/login-banner.png"
+            alt="ERP Illustration"
+            class="banner-image"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script src="js/login.js"></script>
+  </body>
+</html>
