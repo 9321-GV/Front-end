@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const submitBtn = signupForm.querySelector('.submit-btn');
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.innerHTML = `Creating Account... <span class="btn-arrow">→</span>`;
+        submitBtn.innerHTML = `Creating Account... <span class="btn-arrow">&rarr;</span>`;
       }
 
       setTimeout(() => {
